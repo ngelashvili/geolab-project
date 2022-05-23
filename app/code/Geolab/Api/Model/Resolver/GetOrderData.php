@@ -54,7 +54,7 @@ class GetOrderData implements ResolverInterface
             return $this->orderDataProvider->getData($orderId);
 
         } else {
-//            return ['message' => 'ERROR: Module is not enabled'];
+            return ['errorMessage' => 'ERROR: Module is not enabled'];
         }
 
     }
