@@ -1,0 +1,17 @@
+type Mutation {
+    getOrderData(orderId: String!): getOrderDataOutput @resolver(class: "\\Geolab\\Api\\Model\\Resolver\\GetOrderData") @doc(description:"Get Order Information")
+}
+
+type getOrderDataOutput {
+    orderNumber: String
+    order_date: String
+    items: [Items] @doc(description: "The unique ID")
+}
+
+type Items {
+    id: ID! @doc(description: "The unique ID")
+    name: String,
+    sku: String,
+    price: Float,
+    quantity: Int
+}
