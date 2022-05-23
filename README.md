@@ -11,7 +11,8 @@ mutation {
         sku,
         price,
         quantity
-    }
+    },
+    errorMessage
   }
 }
 
